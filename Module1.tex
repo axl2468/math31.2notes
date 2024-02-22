@@ -2,9 +2,24 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
+\usepackage{multicol}
 
 \begin{document}
 
 \section*{Antiderivatives}
+
+An antiderivate $F(x)$ of $f(x)$ is defined by
+\[F'(x) = f(x)\]
+Notation for $F(x)$:
+\[F(x) = \int f(x) \,dx\]
+Some basic examples of antiderivatives:
+
+\begin{multicols}{2}
+    \begin{enumerate}
+        \item $\int e^x \,dx = e^x+c$
+        \item $\int 5x^2 \,dx = \frac{5}{3}x^3+c$
+        \item $\int \sec^2(x) \,dx = \tan(x)+c$
+    \end{enumerate}
+\end{multicols}
 
 \end{document}
