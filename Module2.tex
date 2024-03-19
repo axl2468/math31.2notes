@@ -1,0 +1,48 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{align*}
+    &\int f(\sin{x}, \cos{x}) dx \\
+    &=\int f(\sin{x})\cos{x} dx = \int f(u) du, u = \sin{x} \\\\
+    &\int f(\sec{x}, \tan{x}) dx \\
+    &= \int f(\cos{x})\sin{x} dx = -\int f(u) du, u = \cos{x} \\\\ 
+    &\int f(\csc{x}, \cot{x}) dx \\
+    &= \int \cos^5{x}\sin^3{x}dx = \int \cos^5{x}\sin^2{x}\sin{x}dx \\
+    &= \int \cos^5{x}(1-\cos^2{x})\sin{x} dx \\
+    &= -\int u^5(1-u^2) du, u = \cos{x} \\
+    &= -\frac{u^6}{6} + \frac{u^8}{8} + c \\\\
+    &\int f(\tan{x})\sec^2{x} dx = \int f(u) du, u = \tan{x} \\\\
+    &\int f(\sec{x})\sec{x}\tan{x} dx = \int f(u)du, u = \sec{x} \\\\
+    &\int \sec^4{x}dx = \int \sec^2{x}sec^2{x} dx \\
+    &= \int (1+\tan^2{x}) \sec^2{x} dx \\
+    &= \int (1+u^2)du = u+ \frac{u^3}{3} + c, u = \tan{x} \\\\
+    &\int \sec{x} dx = \ln{\sec{x}+\tan{x}} + c \\\\
+    I &= \int \sec^3{x} dx = uv - \int v du \\
+    &\text{Through IBP: } u=\sec{x}, du=\sec{x}\tan{x}dx, v = \tan{x}, dv = \sec^2{x}dx \\
+    &= \int \sec{x}\tan{x} - \int\sec{x}\tan^2{x} dx \\
+    &= \int \sec{x}\tan{x} - \int\sec{x}(\sec^2{x}-1) dx \\
+    &= \int \sec{x}\tan{x} - \int\sec^3{x} dx - \int \sec{x} dx \\
+    &= \int \sec{x}\tan{x} + \int\sec{x}dx - I \\
+    I &= \frac{\sec{x}\tan{x}+|\sec{x}+\tan{x}|}{2} + C\\\\
+    &\int\tan^3{x} dx \\
+    &= \int\tan{x}\tan^2{x} dx \\
+    &= \int\tan{x}(\sec^2{x}-1) dx \\
+    &= \int\tan{x}\sec^2{x} dx - \int\tan{x} dx \\
+    &= \int u du - ln|\sec{x}| \\
+    &= \frac{\tan^2{x}}{2} - ln|\sec{x}| + C \\\\
+    &\int \frac{x^2}{\sqrt{1-x^2}} dx \\
+    &=\int \frac{\sin^2{\theta}}{\cos{\theta}}\cos{\theta} d\theta, x= \sin{\theta}, dx = \cost{\theta} d\theta
+\end{align*}
+
+\end{document}
+
