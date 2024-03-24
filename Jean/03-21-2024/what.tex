@@ -1,0 +1,56 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\section*{03/21/2024}
+\subsection*{PHYS31.01: Analytical Physics 1 - Lecture}
+    \begin{enumerate}
+    \item \textbf{Center of Mass}
+        \begin{itemize}
+            \item \noindent\textbf{Significance:} In previous discussions, pulleys were considered to be frictionless and massless in order to ensure ease of calculation. Additionally, the topic of center of mass is not discussed yet, making the solving of non-massless and non-frictionless close to, if not impossible, wtihout Calculus. Dealing with more than one particle. Significant in various physics concepts, e.g., thermodynamics (systems of particles).\\
+            \item \noindent The problems dealt with are consisting of systems of \textbf{multiple particles}. Since we are dealing with the system of two or more particles, then we can conveniently analyze the dynamics of the system by considering its \textbf{center of mass (COM)}.\\
+            \item \noindent COM pertains to the point where the system is \textbf{concentrated at}.
+            %IMG 1 HERE
+            \item \noindent The formula for the center of mass is:\\
+            \begin{center}$\vec{r}_{CM}=\frac{m_1\vec{r}_1+m_2\vec{r}_2+...}{m_1+m_2+...}=\frac{\sum_{i=1}^{n} m_i\vec{r}_i}{\sum_{i=1}^{n} m_i}$\end{center}
+            \item \noindent\textbf{Example:} Consider a hammer shown below.\\
+            %IMG 2 HERE (hammer no pic)
+            \noindent The handle has mass 0.2 kg, while the hammer's head has 0.6 kg. Assume that the masses within their respective hammer's parts are uniformly distributed. Where is the COM?\\\\
+            \noindent\textbf{Solution:} Set the origin (0,0) to be at the end of the handle of the hammer.\\
+            $\vec{r}_{CM}=\frac{m_{handle}\vec{r}_{handle}+m_{head}\vec{r}_{head}}{m_{handle}+m_{head}}$\\
+            $\vec{r}_{handle}=0.2[m]\hat{i} (geometric center)$\\
+            $\vec{r}_{head}=0.4[m]\hat{i}+0.04[m]\hat{i}=0.44[m]\hat{i} (geometric center)$\\
+            $\vec{r}_{CM}=\frac{0.2[kg]0.2[m]\hat{i}+0.6[kg]0.44[m]\hat{i}}{0.2[kg]+0.6[kg]}$\\
+            $\vec{r}_{CM}=0.38[m]\hat{i}$  
+            \item \noindent The velocity of the center of mass is:
+            \begin{center}$\vec{v}_{CM}=\frac{\sum_{i=1}^{n} m_i\vec{v}_i}{\sum_{i=1}^{n} m_i}$\end{center}
+            \item \noindent The acceleration of the center of mass is:
+            \begin{center}$\vec{a}_{CM}=\frac{\sum_{i=1}^{n} m_i\vec{a}_i}{\sum_{i=1}^{n} m_i}$\end{center}
+            \item \noindent\textbf{Internal Force vs External Force}
+            \begin{itemize}
+                \item \noindent\textbf{Internal Force:} The forces within the system \textbf{can} form "action-reaction pair" of forces.\\
+                \item \noindent\textbf{External Force:} The forces within the system \textbf{cannot} have any "action-reaction pair" counterpart.\\
+            \end{itemize}
+            \item \noindent\textbf{Example:} In a pulley setup where $m_1$ slides on a frictionless floor and attached to a frictionless and massless string and pulley system, attached to a block $m_2$ hanging below the pulley, the forces on the blocks are tension, gravity, and normal force. Tension is internal, while the normal and gravitational forces are external.\\
+            \begin{center}$\vec{F}_{netext}=m_{sys}\vec{a}_{CM}, where m_{sys}=\sum_{i=1}^{n}m_i$\\\end{center}
+            \item \noindent\textbf{Example:} Consider the Atwood's machine shown below, where $m_a>m_b$. What is $T_c$\\
+            \textbf{Recall:} 
+            \begin{center}$\vec{a}_a=-\frac{m_a-m_b}{m_a+m_b}g\hat{j}$\\
+            $\vec{a}_b=\frac{m_a-m_b}{m_a+m_b}g\hat{j}$\\
+            $\vec{a}_{CM}=-\frac{m_a-m_b}{m_a+m_b}(\frac{m_a-m_b}{m_a+m_b})g\hat{j}$\\
+            $\vec{a}_{CM}=-(\frac{m_a-m_b}{m_a+m_b})^2g\hat{j}$\\
+            $T_c-m_ag-m_bg=(m_a+m_b)a_{cm}$\\
+            $T_c=(m_a+m_b)g+(m_a+m_b)(-(\frac{m_a-m_b}{m_a+m_b})^2g)$\\
+            \end{center}
+        \end{itemize}
+\end{enumerate}
+\end{document}
