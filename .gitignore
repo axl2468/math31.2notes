@@ -1,20 +1,29 @@
+#module1
 **/Module1.aux
 **/Module1.fdb_latexmk
 **/Module1.fls
 **/Module1.log
-**/Module1.pdf
 **/Module1.synctex.gz
 
+#pset1
 **/ProblemSet1.aux
 **/ProblemSet1.fdb_latexmk
 **/ProblemSet1.fls
 **/ProblemSet1.log
-**/ProblemSet1.pdf
 **/ProblemSet1.synctex.gz
 
+#module2
 **/Module2.aux
 **/Module2.fdb_latexmk
 **/Module2.fls
 **/Module2.log
-**/Module2.pdf
 **/Module2.synctex.gz
+
+#jean 03/18/24
+**/Jean/03-18-2024/what.aux
+**/Jean/03-18-2024/what.fdb_latexmk
+**/Jean/03-18-2024/what.fls
+**/Jean/03-18-2024/what.log
+**/Jean/03-18-2024/what.synctex.gz
+
+#jean 03/21/24
