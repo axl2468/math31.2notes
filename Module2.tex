@@ -19,6 +19,12 @@
 
 \section{Integration of Trigonometric Functions}
 
+\subsection*{Moar antiderivatives}
+\begin{align*}
+    &&\int \sec(x)\,dx = \ln|\sec(x)+\tan(x)| + C \\
+    &&\int \csc(x)\,dx = \ln|\csc(x)-\tan(x)| + C
+\end{align*}
+
 \subsection*{Trigonometric Substitution}
 
 \begin{align*}
@@ -29,7 +35,7 @@
 \end{align*}
 
 \subsection*{Useful properties/identities}
-If you see $\int \sin(A)\cos(B) dx$, remember that
+If you see $\int \sin(A)\cos(B) \, dx$, remember that
 \begin{align*}
     \sin(A+B) &= \sin A\cos B + \sin A\cos B \\
     \sin(A-B) &= \sin A\cos B - \sin A\cos B \\
@@ -37,6 +43,25 @@ If you see $\int \sin(A)\cos(B) dx$, remember that
 That means that
 \begin{align*}
     \sin(A+B) + sin(A-B) &= 2\sin A\cos B\\
+\end{align*}
+
+If you see $\int \sin^a(A)\cos^b(A) \, dx$, remember that
+\begin{align*}
+    \sin^2(A) + \cos^2(A) &= 1\\
+\end{align*}
+and
+\begin{align*}
+    \cos^2(2A) &= 2\cos^2(A) -1
+\end{align*}
+so
+\begin{align*}
+    \cos^2(A) &= \frac{1+\cos(2A)}{2} \\
+    \sin^2(A) &= \frac{1-\cos(2A)}{2}
+\end{align*}
+
+If you see any integral with $\tan^a(A)$ and $\sec^b(A)$, remember that
+\begin{align*}
+    \tan^2(A) + 1 &= \sec^2(A)\\
 \end{align*}
 
 \begin{align*}
