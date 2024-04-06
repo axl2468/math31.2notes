@@ -11,6 +11,34 @@
 
 \begin{document}
 
+\section{Integration by Parts}
+
+\begin{equation*}
+    \int u \, dv = uv - \int v \, du
+\end{equation*}
+
+\section{Integration of Trigonometric Functions}
+
+\subsection*{Trigonometric Substitution}
+
+\begin{align*}
+   &\int f(\sqrt{1-x^2}) \,dx && x = \sin\theta \text{ or } \cos\theta \\
+   &\int f(\sqrt{a^2+x^2}) \,dx && x = a\tan\theta \\
+   &\int f(\sqrt{a^2-x^2}) \,dx && x = a\sin\theta \text{ or } a\cos\theta \\
+   &\int f(x\sqrt{x^2-a^2}) \,dx && x = a\sec\theta \\
+\end{align*}
+
+\subsection*{Useful properties/identities}
+If you see $\int \sin(A)\cos(B) dx$, remember that
+\begin{align*}
+    \sin(A+B) &= \sin A\cos B + \sin A\cos B \\
+    \sin(A-B) &= \sin A\cos B - \sin A\cos B \\
+\end{align*}
+That means that
+\begin{align*}
+    \sin(A+B) + sin(A-B) &= 2\sin A\cos B\\
+\end{align*}
+
 \begin{align*}
     &\int f(\sin{x}, \cos{x}) dx \\
     &=\int f(\sin{x})\cos{x} dx = \int f(u) du, u = \sin{x} \\\\
