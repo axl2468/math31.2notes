@@ -1,0 +1,172 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+%\usepackage{hyperref}%
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\section*{04/22/2024}
+\subsection*{PHYS31.01: Analytical Physics 1}
+\begin{enumerate}
+    \item \textbf{Universal Gravitation Law} \\
+    \begin{align*}
+        |\vec{F}_g&=\frac{Gm_1m_2}{r^2}| \\
+        |\vec{F}_e&=\frac{k|q_1||q_2|}{r^2}| \\
+    \end{align*}
+        \textit{One-to-one correspondence of Gravitation with Coulomb's Law} \\
+    \begin{align*}
+        \textit{where }G&=6.67*10^{-11}[\frac{Nm^2}{kg^2}]&\textit{(Gravitation Constant)} \\
+        \textit{where }k&=8.99*10^{9}[\frac{Nm^2}{C^2}]&\textit{(Coulomb Constant)} \\
+    \end{align*}
+    Acceleration due to gravity \\
+    $\hookrightarrow$ gravitation field \\
+    $\hookrightarrow$ Amount of gravitational force exerted by a particle/celestial body per unit mass.
+    \begin{align*}
+        |\vec{g}|&=\frac{\vec{F_g}}{m_1}=\frac{Gm_2}{r^2} \\
+    \end{align*}
+    So, on the Earth's surface,
+    \begin{align*}
+        |\vec{g}_e|&=9.8[m/s^2]=\frac{Gm_{earth}}{r_{earth}^2} \\
+    \end{align*}
+    Our weight on the earth's surface is described by:
+    \begin{align*}
+        W&=mg=m(\frac{Gm_{earth}}{R_e^2}) \\
+    \end{align*}
+    where W is the weight on the earth's surface.
+    \item \textbf{Examples: } \\
+    \begin{enumerate}
+        \item Imagine a system of masses $m_1=4m$, $m_2=4m$, and $m_3=m$ where $m_1$ is located at $(0,0)$, $m_2$ is located at $(2a,0)$, and $m_3$ is located at $(a,3a)$.
+        \begin{enumerate}
+            \item{What is the weight of $m_3$ due to $m_1$ \& $m_2$?}
+            \textit{Horizontal component of $\vec{F}_{1\rightarrow3}$ \& $\vec{F}_{2\rightarrow3}$ vanish} \\
+            Distance between $m_1$ \& $m_3$:
+            \begin{align*}
+                |\vec{r}_{1\rightarrow3}|&=\sqrt{a^2+9a^2}=a\sqrt{10} \\
+            \end{align*}
+            so: \\
+            \begin{align*}
+                |\vec{F}_{1\rightarrow3}|&=|\vec{F}_{2\rightarrow3}|=\frac{G(4m)(m)}{(a\sqrt{10})^2}=(\frac{2}{5})(\frac{Gm^2}{a^2}) \\
+                sin\theta=\frac{3}{\sqrt{10}}&;cos\theta=\frac{1}{\sqrt{10}} \\
+                \vec{F}_{net,on3}&=-\hat{j}(2)|\vec{F}_{1\rightarrow3}|sin\theta \\
+                \vec{F}_{net,on3}&=-\hat{j}(\frac{4}{5})(\frac{3}{\sqrt{10}})((\frac{Gm^2}{a^2})) \\
+                &=-\hat{j}(\frac{12}{5\sqrt{10}})((\frac{Gm^2}{a^2})) \\
+            \end{align*}
+            \item{What is the gravitational field at point where $m_3$ is located?}
+            \begin{align*}
+                \vec{g}_{on3}&=\frac{\vec{F}_{net,on3}}{m_3} \\
+                &=-\hat{j}\frac{12}{5\sqrt{10}}\frac{Gm}{a^2} \\
+            \end{align*}
+        \end{enumerate}
+    \end{enumerate}
+    \item \textbf{Gravitational Potential Energy} \\
+    For a flat surface, \\
+    \begin{align*}
+        \vec{g}&=-9.8[m/s^2]\hat{j} \\
+        \textit{where }U_g&=mgy \\
+        \textit{and }|\vec{F}_g|&=m|\vec{g}|. \\
+    \end{align*}
+    For spherical body, \\
+    \begin{align*}
+        U_g&=\frac{-Gm_1m_2}{r} \\
+        \textit{and }|\vec{F}_g|&=\frac{Gm_1m_2}{r^2}. \\
+    \end{align*}
+    To show that the formula $U_g=mgy$ for the assumption of "flat earth surface" appears at the gravitational potential energy formula, we can use the assumption that on the Earth's surface, at some height h above the ground, we set a heigh $h<<R_e$.
+    \begin{align*}
+        U_g&=\frac{-GM_em}{R_e+h}=\frac{-GM_em}{R_e}(\frac{1}{1+h/R_e}) \\
+    \end{align*}
+    By binomial expansion
+    \begin{align*}
+        U_g&=\frac{-GM_em}{R_e}(1-\frac{h}{R_e}+\frac{h^2}{R_e^2}-...)\\
+        U_g&=\frac{-GM_em}{R_e}({1-\frac{h}{R_e}})&(\textit{because the latter terms are cancellable.}) \\
+        U_g&=U_0+mgh \\
+    \end{align*}
+    By that, we have shown a \textbf{one-to-one correspondence} between the two formulas. \\
+    \\
+    What, then is the essence of using the $-Gm_1m_2/r$ formula? \\ To calculate \textbf{escape velocity.} \\
+    \\
+    What is the escape velocity of the Earth? \\
+    Use the \textit{Energy Conservation} where the before case is before launch and after case is when the rocket is at the outer space.
+    \begin{align*}
+        E_i&=U_i+K_i \\
+        &=-\frac{GM_em}{R_e}+\frac{1}{2}mv^2 \\
+        \\
+        E_f&=U_f+K_f \\
+        &=0+0 \\
+        \\
+        E_i&=E_f \\
+        -\frac{GM_em}{R_e}+\frac{1}{2}mv^2&=0 \\
+        v&=\sqrt{\frac{2GM_e}{R_e}}\approx11.2[km/s]
+    \end{align*}
+\end{enumerate}
+\subsection*{MATH31.2: Mathematical Analysis IB}
+\begin{enumerate}
+    \item \textbf{$r=1-3sin\theta$}
+    \begin{align*}
+        r_{max}=4&\Rightarrow4=1-3sin\theta \\
+        &\Rightarrow3=-3sin\theta \\
+        &\Rightarrow-1=sin\theta \\
+        &\Rightarrow\theta=(\frac{3\pi}{2})&(or-\frac{\pi}{2}) \\
+        \\
+        r_{min}=0&\Rightarrow0=1-3sin\theta \\
+        &\Rightarrow\frac{1}{3}=sin\theta \\
+        &\Rightarrow\theta=0.34 \\
+        \\
+        &(\textit{graph is a limacon with a loop})
+    \end{align*}
+    \textbf{BASIS:}
+    \begin{align*}
+        0<|\frac{a}{b}|&<1&(\textit{limacon with loop}) \\
+        1<|\frac{a}{b}|&<2&(\textit{limacon with dent}) \\
+        |\frac{a}{b}|&\ge2&(\textit{concave dimension}) \\
+        \textit{where: } r=a+bsin\theta \textit{ or } r&=a+bcos\theta \\
+    \end{align*}
+    \\\\
+    \item \textbf{Area Under the Polar Curve} \\
+    \begin{enumerate}
+        \item Using the previous example: \\
+        \begin{align*}
+            A_{innerloop}&=(2)(\frac{1}{2})\int_{sin^{-1}{1/3}}^{\pi/2} (1-3sin\theta)^2d\theta \\
+            &= \int[1-6sin\theta+9sin^2\theta]d\theta \\
+            &= \theta + 6cos\theta + \frac{9}{2} \int1-cos2\theta d\theta \\
+            &= [ \frac{11}{2}\theta + 6cos\theta - (\frac{9}{2})(\frac{sin2\theta}{2}) ]_{sin^{-1}{1/3}}^{\pi/2}
+        \end{align*}
+        \item Set-up the integral for the area of the region inside both $r=1$ and $r=2sin\theta$.
+        \begin{align*}
+            A&=(8)(\frac{1}{2})\int (r_{far}^2-r_{near}^2) d\theta \\
+            \\
+            r_{near}&=0 \\
+            \\
+            2sin2\theta&=1 \\
+            sin2\theta&=1/2 \\
+            \theta&=\frac{\pi}{12} \\
+            \\
+            A&=4\int_{0}^{\pi/12} ((2sin2\theta)^2-(0^2)) d\theta + 4\int_{\pi/12}^{\pi/4} ((1)^2-(0^2)) d\theta \\
+        \end{align*}
+    \end{enumerate}
+    \item \textbf{Lemniscate} \\
+    \begin{align*}
+        r^2&=acos2\theta &r^2=asin2\theta \\
+        \\
+        \textit{Example: } r^2&=2cos2\theta \\
+        r&=\sqrt{2},-\sqrt{2} \\
+        r^2&=2&\Rightarrow cos2\theta=1 \\
+        &&\Rightarrow 2\theta=0 \\
+        \\
+        r&=0 \\
+        cos2\theta&=0 \\
+        \theta&=\frac{\pi}{4} \\
+        \\
+        \textit{Area of lemniscate: } \\
+        A&=(4)(\frac{1}{2})\int_{0}^{\pi/4}2cos2\theta d\theta \\
+        &=4[\frac{sin2\theta}{2}]_{0}^{\pi/4} \\
+        &=2 \\
+    \end{align*}
+\end{enumerate}
+\end{document}

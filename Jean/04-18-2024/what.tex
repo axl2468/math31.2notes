@@ -1,0 +1,126 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+%\usepackage{hyperref}%
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\section*{04/18/2024}
+\subsection*{M31.2: Mathematical Analysis IB}
+\begin{enumerate}
+    \item \textbf{Formulas to Remember:}
+    \begin{align*}
+        x&=rcos\theta \\
+        y&=rsin\theta \\
+        \\
+        \frac{y}{x}&=\frac{rsin\theta}{rcos\theta} \\
+        \frac{y}{x}&=tan\theta \\
+        \theta&=tan^{-1}(\frac{y}{x}) \\
+        \\
+        x^2+y^2&=r^2cos^2(\theta)+r^2sin^2(\theta) \\
+        x^2+y^2&=r^2 \\
+        r&=\sqrt{x^2+y^2}
+    \end{align*}
+    \item \textbf{Examples:}
+    \begin{enumerate}
+        \item \textbf{$(x,y)=(3,-3)$}
+        give $(r,\theta), 2\pi\le\theta\le4\pi$ \\
+        \begin{align*}
+            r&=\sqrt{3^2+(-3)^2} \\
+            &=3\sqrt{2} \\
+            \\
+            \theta&=2\pi+\frac{7\pi}{4} \\
+            &=\frac{15\pi}{4} \\
+        \end{align*}
+        \item \textbf{$(x,y)=(3,-3)$}
+        give $(r,\theta), r<0, -\pi\le\theta\le\pi$ \\
+        \begin{align*}
+            r&=-3\sqrt{2} \\
+            \\
+            \theta&=\frac{3\pi}{4} \\
+        \end{align*}
+        \item \textbf{$(x,y)=(-4,-4\sqrt{3})$}
+        give $(r,\theta), r<0, -8\pi\le\theta\le-6\pi$ \\
+        \begin{align*}
+            r&=\sqrt{(-4)^2+(-4\sqrt{3})^2} \\
+            &=8 \\
+            &\Rightarrow-8&(R<0) \\
+            \\
+            \theta&=-2\pi+\frac{\pi}{3} \\
+            &=\frac{-5\pi}{3} \\
+            &\Rightarrow\frac{-23\pi}{3}&(-8\pi\le\theta\le-6\pi) \\
+        \end{align*}
+        \item \textbf{$(x,y)=(1,2)$}
+        give $(r,\theta), r<0, 2\pi\le\theta\le4\pi$ \\
+        \begin{align*}
+            r&=\sqrt{(1)^2+(2)^2} \\
+            &=\sqrt{5} \\
+            &\Rightarrow -\sqrt{5}&(R<0) \\
+            \\
+            \theta&=1.11 \\
+            &\Rightarrow2\pi+1.11&(2\pi\le\theta\le4\pi) \\
+            &\Rightarrow3\pi+1.11&(r<0) \\
+        \end{align*}
+        \item \textbf{$(x,y)=(1,-2)$}
+        give $(r,\theta), r<0, 2\pi\le\theta\le4\pi$ \\
+        \begin{align*}
+            r&=\sqrt{(-1)^2+(-2)^2} \\
+            &\Rightarrow\sqrt{5}&(R>0) \\
+            \\
+            \theta&=1.11 \\
+            &\Rightarrow2\pi+1.11&(2\pi\le\theta\le4\pi) \\
+        \end{align*}
+        \item \textbf{LAHAT NAMAN TAYO AY MAMAMATAY!!!!} \\
+            %\begin{center}CERTIFIED CULT CLASSIC \url{https://soundcloud.com/sintasan-banda/baboy}\\\end{center}%
+    \end{enumerate}
+    \item \textbf{Area of a Circle} \\
+    - it is a known fact that the area of a circle is $[A=\frac{1}{2}r^2\theta]$. \\
+    - this can be expressed better using the integral function $[A=\frac{1}{2}\int_{\alpha}^{\beta}f(\theta)^2d\theta]$, where $r=f(\theta)$. \\
+    \begin{enumerate}
+        \item \textbf{$r=2cos\theta$}
+        \begin{align*}
+            r^2&=2rcos\theta \\
+            x^2+y^2&=2x \\
+            x^2-2x+y^2&=0 \\
+            x^2-2x+1+y^2&=1 \\
+            (x-1)^2+y^2&=1 \\
+            \\
+            A&=(2)(\frac{1}{2})\int_{0}^{\pi/2}(2cos\theta)^2d\theta \\
+            &=4\int_{0}^{\pi/2}cos^2\theta d\theta \\
+            &=4\int_{0}^{\pi/2}\frac{1+cos^2\theta}{2} d\theta \\
+            \\
+            r&=0 \\
+            2cos\theta&=0 \\
+            \theta&=\frac{\pi}{2} \\
+            \\
+            &=2[\theta+\frac{\sin2\pi}{2}]_{0}^{\pi/2} \\
+            &=2(\frac{\pi}{2}-0)=\pi \\
+        \end{align*}
+        \\\\\\\\\\\\\\\\\\\\\\\item \textbf{$r=2sin(2\theta)$} \\
+        \begin{align*}
+            \textit{FUN FACT:} \\
+            r&=asin(n\theta) \\
+            r&=acosn(n\theta) \\
+            \textit{If n is even, rose with 2n petals.} \\
+            \\
+            r_{max}&=2\textit{ or }=-2 \\
+            r_{min}&=0 \\
+            \\
+            sin(2\theta)&=+-1\\
+            \theta&=\frac{\pi}{4},-\frac{\pi}{4},\frac{3\pi}{4},\frac{5\pi}{4} \\
+            \\
+            sin(2\theta)&=0\\
+            \theta&=0,\frac{\pi}{2},{\pi},-\frac{\pi}{2} \\
+            \\
+            A&=(8)(\frac{1}{2})\int(2sin(2\theta))^2d\theta \\
+        \end{align*}
+    \end{enumerate}
+\end{enumerate}
+\end{document}

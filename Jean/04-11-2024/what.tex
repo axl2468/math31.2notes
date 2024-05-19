@@ -1,0 +1,203 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\section*{04/01/2024}
+\subsection*{PHYS31.01: Analytical Physics I}
+        \begin{enumerate}
+            \item \textbf{Conservation of Angular Momentum}
+            - The total angular momentum of the system is conserved if the net external torque acting on the system is zero.
+            \begin{align*}
+                &\textit{Linear Motion}&&\textit{Rotational Motion} \\
+                &\vec{F}_{net}&&\vec{\tau}_{net} \\
+                \vec{p}&=m\vec{v}&\vec{L}&=\vec{r}\times\vec{p} \\
+                &&\textit{or }\vec{L}&=I\vec{\omega}\textit{ if the object rotates about its COM}
+            \end{align*}
+            \begin{enumerate}
+                \item \textbf{Example 1:}
+                Consider a ballerina that has an initial angular speed of 2 [${rev}/{s}$]. Initially, her arms are closed so that her initial moment of inertia about her COM is 100 [${kg}\cdot{m^2}$]
+                %\begin{center}\includegraphics[width=10cm, height=5cm]{0.PNG}\end{center}
+                If she opens her arms, her resulting $I=160[{kg}\cdot{m^2}]$. What will be her angular speed if she opens her arms?
+                %\begin{center}\includegraphics[width=10cm, height=5cm]{0.PNG}\end{center}
+                \begin{align*}
+                    \vec{L}&=I\vec{\omega} \\
+                    \textit{Initial angular momentum: }\vec{L}_1&=I_1\vec{\omega}_1 \\
+                    \textit{Final angular momentum: }\vec{L}_2&=I_2\vec{\omega}_2 \\
+                    \textit{Through conservation of angular momentum...} \\
+                    L_1&=L_2 \\
+                    I_1\vec{\omega}_1&=I_2\vec{\omega}_2 \\
+                    \vec{\omega}_2&=\frac{I_1}{I_2}\vec{\omega}_1 \\
+                    \vec{\omega}_2&=\frac{100[{kg}\cdot{m^2}]}{160[{kg}\cdot{m^2}]}{2[rev/s]}_1 \\
+                \end{align*}
+                \item \textbf{Example 2:}
+                Imagine a solid disk with uniform mass distribution, with R radius and M mass and fixed at its center. A putty strikes it and after the putty sticks on the outer rim of the disk, what will be the resulting angular speed of the disk? (Assume no external torque in the system.)
+                %\begin{center}\includegraphics[width=10cm, height=5cm]{0.PNG}\end{center}
+                \begin{align*}
+                    \vec{L}&=I\vec{\omega} \\
+                    \textit{Initial angular momentum: }\vec{L}_i&=I_{i_D}\vec{\omega}_{i_D} + \vec{r}\times\vec{p}_1 \\
+                    \textit{Final angular momentum: }\vec{L}_f&=I_{f_D}\vec{\omega}_{f_D} \\
+                    \textit{For putty,} \\
+                    %\begin{center}\includegraphics[width=10cm, height=5cm]{0.PNG}\end{center}
+                    \vec{L}_{putty}&=|\vec{r}\times\vec{p}|\hat{k} \\
+                    &=|\vec{r}||\vec{p}|sin\theta\hat{k} \\
+                    &=dm|\vec{v}|\hat{k} \\
+                    L_i&=L_f \\
+                    I_{i_D}\vec{\omega}_{i_D} + \vec{r}\times\vec{p}_1&=I_{f_D}\vec{\omega}_{f_D} \\
+                    \textit{where... }I_{f_D}&=\frac{1}{2}MR^2+mR^2 \\
+                    \textit{and } I_{i_D}\vec{\omega}_{i_D}&=0\textit{ because }\vec{\omega}=0\\
+                    dm|\vec{v}|\hat{k}&=(\frac{1}{2}MR^2+mR^2)\vec{\omega}_{f_D} \\
+                    \vec{\omega}_{f_D}&=\frac{dm|\vec{v}|}{\frac{1}{2}MR^2+mR^2}\hat{k} \\
+                \end{align*}
+            \end{enumerate}
+            \item \textbf{Static Equilibrium Conditions}
+            \begin{align*}
+                \text{Condition }1:&\sum_i\vec{F}_i=0 \\
+                2:&\sum_i\vec{\tau}_i=0
+            \end{align*}
+            \item \textbf{Center of Gravity} 
+            The point where the gravitational force acts on the object. \\ \\
+            \textbf{REMEMBER:} Center of gravity is \textbf{NOT ALWAYS} equal to center of mass. It is only equal when the position of the object in question has a negligible distance from the surface of the celestial body R. \\
+            \begin{enumerate}
+                \item \textbf{Example 1:}
+                Consider a lever with a uniform bar of mass M and length L, with a fulcrum d distance from the mass m sat upon the lever. \\
+                %\begin{center}\includegraphics[width=10cm, height=5cm]{0.PNG}\end{center]
+                \\\\\\\\1. What is m so that the system is equlibrium?
+                %FBD: \begin{center}\includegraphics[width=10cm, height=5cm]{0.PNG}\end{center]
+                \begin{align*}
+                    \textit{Ref. point: }0 \\
+                    \sum_i\vec{\tau}_i&=0 \\
+                    \vec{\tau}_{bar}+\vec{tau}_{block}&=0 \\
+                    (Mg)(\frac{L}{2}-d)-(mg)d&=0 \\
+                    m&=M(\frac{L}{2d}-1) \\
+                \end{align*}
+                2. What is the force exerted by the fulcrum in terms of L, d, and M?
+                \begin{align*}
+                    N-mg-Mg&=0 \\
+                    N&=g(m+M) \\
+                    N&=gM\frac{L}{2d} \\
+                \end{align*}
+            \end{enumerate}
+        \end{enumerate}
+\subsection*{Math 31.2: Mathematical Analysis II}
+        \begin{enumerate}
+            \item \textbf{Separable Differential Equations}
+            Separable DEs of the form: \\
+            \begin{align*}
+                y'&=f(x)g(y) \\
+                \frac{dy}{dx}&=f(x)g(y) \\
+                \frac{dy}{g(y)}&=f(x)dx \\
+                \int \frac{dy}{g(y)}&=\int f(x)dx \\
+                G(y)&=F(x)+C \\\\\\\\\\\\\\\\\\
+            \end{align*}
+            \item \textbf{Examples:}
+                \begin{enumerate}
+                    \item \textit{$y''=-8$}
+                        \begin{align*}
+                            \frac{d\frac{dy}{dt}}{dt}&=-9.8 \\
+                            \int d(\frac{dy}{dt})&=-\int9.8dt \\
+                            \frac{dy}{dt}&=-9.8t+C_1 \\
+                            dy&=(-9.8t+C_1)dt \\
+                            y''&=\frac{d^2y}{dt^2} \\
+                            \frac{d\frac{dy}{dt}}{dt} \\
+                            y(t)&=-4.9t^2+C_1t+C_2 \\
+                        \end{align*}
+                    \item \textit{$y'=(3y+2)(x^2+2)$}
+                        \begin{align*}
+                            \frac{dy}{dx}&=(3y+2)(x^2+2) \\
+                            \frac{dy}{3y+2}&=(x^2+2)dx \\
+                            \frac{1}{3}ln|3y+2|&=\frac{x^3}{3}+2x+C \\
+                        \end{align*}
+                        Moreover, there is a particular solution corresponding to $3y+2=0$.
+                        \begin{align*}
+                            \Rightarrow& \frac{dy}{dx}=0 \\
+                            \Rightarrow& y=K=-\frac{2}{3} \\
+                        \end{align*}
+                        Simplifying the earlier expression:
+                        \begin{align*}
+                            ln|3y+2|&=x^3+6x+C \\
+                            3y+2&=e^{x^3+6x+C} \\
+                            3y+2&=e^{x^3+6x}e^C \\
+                            3y+2&=Ae^{x^3+6x}&(where A=e^C) \\
+                            y(x)&=\frac{Ae^{x^3+6x}-2}{3} \\
+                        \end{align*}
+                    \item \textit{$y'=\sqrt{\frac{1-y^2}{1-x^2}}$}
+                    \begin{align*}
+                        \frac{dy}{\sqrt{1-y^2}}&=\frac{dx}{\sqrt{1-x^2}} \\
+                        sin^{-1}y&=sin^{-1}x+C \\
+                        y(x)&=(sin(sin^{-1}x+C)) \\
+                        &=sin(sin^{-1}x)cosC+cos(sin^{-1}x)sinC \\
+                        &=xcosC+\sqrt{1-x^2}sinC \\
+                    \end{align*}
+                    Moreover, there are particular solutions corresponding to $y'=0$.
+                        \begin{align*}
+                            &\Rightarrow y=1 &\Rightarrow y=-1
+                        \end{align*}
+                    \item \textit{$\frac{dy}{dx}=3x^2y^2$, $y(0)=\frac{1}{2}$}
+                    \begin{align*}
+                        \frac{dy}{y^2}&=3x^2dx \\
+                        -\frac{1}{y}&=x^3+C \\
+                        -2&=0^3+C &(\textit{because }y(0)=\frac{1}{2}) \\
+                        C&=-2 \\
+                        -\frac{1}{y}&=x^3-2 \\
+                        \frac{1}{y}&=2-x^3 \\
+                        y(x)&=\frac{1}{2-x^3} \\
+                    \end{align*}
+                    Moreover, there is a particular solution corresponding to $y'=0$.
+                        \begin{align*}
+                            \frac{dy}{dx}=0&\Rightarrow y(x)=C_1 \\
+                            &\Rightarrow y^2=0 \\
+                            &\Rightarrow y=0 \\
+                        \end{align*}
+                    But is this solution viable? \textbf{NO.} \\
+                    This assumes that for all y, $y(x)=0$. It contradicts the fact that $y(x=0)=\frac{1}{2}$ \\
+                    \item \textit{$y''=-y$}
+                    \begin{align*}
+                        y_1(x)&=C_1cosx \\
+                        y_2(x)&=C_2sinx \\
+                        y(x)&=C_1cosx+C_2sinx \\
+                    \end{align*}
+                    \item \textit{$y''=y$}
+                    \begin{align*}
+                        y_1(x)&=C_1e^x \\
+                        y_2(x)&=C_2e^{-x} \\
+                        y(x)&=C_1e^x+C_2e^{-x} \\
+                    \end{align*}
+                    \item \textit{Solve $y''=-y$, $y(0)=1$, $y'(0)=1$}
+                    \begin{align*}
+                        y(x)&=C_1cosx+C_2sinx \\
+                        \Rightarrow x&=0 &\Rightarrow C_1=1 \\
+                        y'(x)&=-C_1sinx+C_2cosx \\
+                        \Rightarrow x&=0 &\Rightarrow C_2=1 \\
+                        y(x)&=cosx+sinx \\
+                        &=\sqrt{2}(cos(x)sin(\frac{\pi}{4})+cos(\frac{pi}{4})(x)) \\
+                        &=\sqrt{2}sin(x+\frac{pi}{4}) \\
+                    \end{align*}
+                    \item \textit{$y'=(x+y)^2$}
+                    Using change of variable:
+                    \begin{align*}
+                        z&=x+y \\
+                        z-x&=y \\
+                        \frac{dz}{dx}-1&=y' \\
+                    \end{align*}
+                    Then...
+                    \begin{align*}
+                        \frac{dz}{dx}-1&=z^2 \\
+                        \frac{dz}{dx}&=z^2+1 \\
+                        \frac{dz}{z^2+1}&=dx \\
+                        tan^{-1}z&=x+C \\
+                        z&=tan(x+C) \\
+                        x+y&=tan(x+C) \\
+                        y(x)&=tan(x+C)-x \\
+                    \end{align*}
+                \end{enumerate}
+        \end{enumerate}
+\end{document}

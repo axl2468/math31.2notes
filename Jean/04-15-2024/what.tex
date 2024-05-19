@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\section*{04/01/2024}
+\subsection*{PHYS31.01: Analytical Physics I}
+        \begin{enumerate}
+            \item \textbf{Examples:}
+            \begin{enumerate}
+                \item \textbf{Example 2:}
+                Imagine a uniform ladder of weight 200[N] lying on a frictionless wall and a rough floor of certain $\mu_s$. The distance of the bottom of the ladder to the wall is 3[m], while the distance of the top of the ladder to the floor is 4[m].
+                \begin{enumerate}
+                    \item What is the $\mu_s$ of the floor so that the ladder is at static equilibrium? 
+                    \textit{Conditions: }
+                    \begin{align*}
+                        \sum_i\vec{F}_i&=0 \\
+                        \sum_i\vec{\tau}_i&=0 \\
+                    \end{align*}
+                        \textit{Along vertical: }
+                    \begin{align*}
+                        N_f-W&=0 \\
+                        N_f&=200[N] \\
+                        \\
+                        \sum_i\vec{\tau}_i&=0 \\
+                        \vec{\tau}_{\omega}+\vec{\tau}_{N}+\vec{\tau}_{fs}&=0 \\
+                        |\vec{\tau}_{fs}|&=Lf_ssin\phi=(Lsin\phi)f_s \\
+                        &=(4[m])f_s \\
+                        |\vec{\tau}_{W}|&=(1.5[m])W \\
+                        |\vec{\tau}_{N_f}|&=(3[m])N_f \\
+                        0&=-(4[m])f_s-(1.5[m])W+(3[m])N_f \\
+                        f_s&=\frac{3N_f-1.5W}{4} \\
+                        f_s&=\frac{3W(1-1/2)}{4}=75[N] \\
+                        \\
+                        f_s&=\mu_sN \\
+                        75[N]&=\mu_s(200[N]) \\
+                        \mu_s&=3/8 \\
+                        \\
+                    \end{align*} 
+                    \item What is the force exerted by the wall on the ladder?
+                    \begin{align*}
+                        N_w-f_s&=0 \\
+                        N_w&=75[N] \\
+                        \\
+                    \end{align*}
+                \end{enumerate}
+                \item \textbf{Example 3:}
+                A wheel that has a mass $m$ and radius $R$ is trying to climb a ledge at point $O$ of height $h$ with a force $|\vec{F}|$ applied on top of the wheel. 
+                \begin{enumerate}
+                    \item What should be the minimum $|\vec{F}|$ so that the wheel can make its landing on the ledge?
+                    \\
+                    \textit{We apply: $\sum_i\vec{\tau}_i=0$ at pt. 0} \\
+                    \textit{We try to get d, where d is the distance textit of the wheel rotation axis about point O from point O. Thus, by trigonometry:} \\
+                    \begin{align*}
+                        d&=aa \\
+                        \\
+                        \vec{\tau}_mg+\vec{F}&=0 \\
+                        mg\sqrt{2Rh-h^2}-F(2R-h)&=0 \\
+                        \\
+                    \end{align*}
+                    \textit{It is minimum force to climb because N is already assumed to be 0. Thus...} \\
+                    \begin{align*}
+                        F_{min}&=mg\frac{\sqrt{2Rh-h^2}}{2R-h} \\
+                        \\
+                    \end{align*} 
+                    \item What is the force exerted by the ledge on the wheel at point of contact $O$.
+                    \begin{align*}
+                        |\vec{F}_r|&=\sqrt{F_{r_ix}^2+F_{r_iy}^2} \\
+                        \\
+                        V:&\vec{F}_{r_iy}-mg=0 \\
+                        \Rightarrow\vec{F}_{r_iy}&=mg \\
+                        H:&-\vec{F}_{r_ix}+F_{min}=0 \\
+                        \Rightarrow\vec{F}_{r_ix}&=mg\frac{\sqrt{2Rh-h^2}}{2R-h} \\
+                        |\vec{F}_r|&=mg\sqrt{1+\frac{2Rh-h^2}{(2R-h)^2}} \\
+                        \\
+                    \end{align*} 
+                \end{enumerate}
+            \end{enumerate}
+            \item \textbf{Young's Modulus}
+            -Young's modulus Y where:
+            \begin{align*}
+                Y&=\frac{stress}{strain} \\
+                stress&=\frac{\vec{F}_{\perp}}{A}&(\textit{SI unit is $[N/m^2]$ or $Pa$}) \\
+                strain&=\frac{\Delta l}{l_0} \\
+                &=\frac{l_f-l_0}{l_0} \\
+            \end{align*}
+        \end{enumerate}
+\end{document}

@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+%\usepackage{hyperref}%
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\section*{04/29/2024}
+\subsection*{PHYS31.01: Analytical Physics 1}
+\begin{enumerate}
+    \item \textbf{Equation of Motion of Linear Oscillation} \\
+    \begin{align*}
+        a+\omega_f^2x&=constant \\
+        a&:\textit{ acceleration} \\
+        \omega_f^2&:\textit{ proportionality constant} \\
+        x&:\textit{ displacement of object about equilibrium point} \\
+    \end{align*}
+    \item \textbf{Some Formulas} \\
+    \begin{align*}
+        \textit{Linear Oscillation} \\
+        a=-\omega_f^2x \\
+        v_{max}&=\omega_fA \\
+        \\
+        \textit{Rotational Oscillation} \\
+        \alpha&=-\omega_f^2\theta \\
+        \omega_{max}&=\omega_f^2A \\
+    \end{align*}
+    \item \textbf{Equation of Motion of Linear Oscillation} \\
+    \textbf{Summary of Oscillation Parameters:} \\
+    Amplitude: maximum angular displacement \\
+    Period: time to complete one cycle \\
+    Phase: indicates lead or lag of oscillation \\
+    INC \\
+    \item \textbf{Plots} \\
+    Just some calculus of trig functions lol \\
+    \item \textbf{Phase Constant} \\
+    When phase constant is  \textit{zero}, the position is \textit{max} and velocity is \textit{zero}. \\
+    When phase constant is  \textit{negative}, the position \\
+    When phase constant is  \textit{positive}, the position \\
+    INC \\
+    \item \textbf{Problems Involving SHM} \\
+    \textit{\textbf{Linear Oscillation (Horizontal)}} \\
+    \\
+    Recall: Hooke's Law \\
+    $F_{spring}=-kx$ \\
+    How?? \\
+    \begin{align*} 
+        ma&=-kx \\
+        a&=-\frac{k}{m}x \\
+        &Recall: a=-\omega_f^2x\\
+        \omega_f^2&=\frac{k}{m} \\
+        \omega_f&=\sqrt{\frac{k}{m}} \\
+        \\
+        f&=\frac{\omega_f}{2\pi}=\frac{1}{2\pi}\sqrt{k/m} \\
+        Period(T_{per})&=2\pi\sqrt{m/k} \\
+        \\
+        \textit{Linear Osci} \\
+        a+\frac{k}{m}x&=0 \\
+        \\
+        \textit{Linear Osci} \\
+        a+\frac{k}{m}x&=0 \\
+        \\
+        \textit{Linear Osci} \\
+        a+\frac{k}{m}x&=0 \\
+    \end{align*}
+    \textit{\textbf{Linear Oscillation (Vertical)}} \\
+    \begin{align*}
+        a+\frac{k}{m}y&=-g \\
+        -ky-mg&=ma \\
+        \\
+        \omega_f&=\sqrt{k/m} \\ 
+    \end{align*}
+    \textit{\textbf{Rotational Oscillation (Simple Pendulum)}} \\
+    The gravitational force does torque on a simple pendulum \\
+    \\
+    Equation of Motion: \\
+    \begin{align*}
+        -mgLsin\theta&=I\alpha=mL^2\alpha \\
+        -gsin\theta&=L\alpha \\
+        sin\theta\approx\alpha &\textit{(for small oscillations)} \\
+        \alpha+\frac{g}{L}\theta&=0 \\
+    \end{align*}
+    Solution: \\
+    \begin{align*} 
+        \theta(t)&=\theta_0cos(\omega_ft+\delta) \\
+    \end{align*}
+    Angular Frequency: \\
+    \begin{align*} 
+        \omega_f&=\sqrt{\frac{g}{L}} \\
+    \end{align*}
+    \textit{\textbf{Rotational Oscillation (Physical Pendulum)}} \\
+    The gravitational force does torque on a physical pendulum \\
+    \\
+    Equation of Motion: \\
+    \begin{align*}
+        ?? \\
+    \end{align*}
+    Solution: \\
+    \begin{align*} 
+        \theta(t)&=\theta_0cos(\omega_ft+\delta) \\
+    \end{align*}
+    Angular Frequency: \\
+    \begin{align*} 
+        \omega_f&=\sqrt{\frac{MgL}{I}} \\
+    \end{align*}
+    \\
+    \\
+\end{enumerate}
+\subsection*{Math 10: Mathematics in the Modern World}
+\begin{enumerate}
+    \item \textbf{Centrality} \\
+    - a concept in graph theory used to measure the \textit{importance} of certain vertices in a graph. It can be described in a variety of ways. \\
+    - assigns a numerical value to a vertex that helps you compare vertices in your netwrok in terms of importance and criticality. \\
+    \begin{enumerate}
+        \item \textbf{Degree Centrality} \\
+        - the higher the degree, the more important a node is (larger immediate connections). \\
+        Ex: (Social media connections) \\
+        \item \textbf{Closeness Centrality} \\
+        - the \textit{geodesic distance} between two vertices $u$ and $v$ is the number of edges, if any, on a shortest path between $u$ and $v$. If the vertices are not connected by a path, their geodesic distance is $\inf$. \\
+        - the \textit{closeness centrality} of a vertex is the sum of the geodesic distance between that vertex and all the other vertices in the network, i.e. \\
+        \begin{align*} 
+            C(u)&=\sum_{i=1}^n d(u,v_i) \\
+        \end{align*}
+        - vertices with high closeness centrality are those that can access the rest of the vertices with \underline{less work.}
+        \item \textbf{Betweenness Centrality} \\
+        - measures the importance of a vertex in a network based upon how many times it occurs in the shortest path between all pairs of vertices in a graph. \\
+        - It is given as follows:
+        \begin{align*} 
+            B(u)&=\sum_{a,b\in V(G)} \frac{\textit{no. of shortest paths between $a$ and $b$, passing through $u$}}{\textit{no. of shortest paths between $a$ and $b$}} \\
+        \end{align*}
+        - Vertices with high betweenness centrality are important because their absence or removal in the network would \textit{disrupt} the paths between many pairs of vertices in the network. \\
+    \end{enumerate}
+    \item 
+\end{enumerate}
+\end{document}

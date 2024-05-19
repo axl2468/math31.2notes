@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{multicol}
+\usepackage{graphicx}
+%\usepackage{hyperref}%
+
+\graphicspath{ {./images/} }
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+\section*{04/25/2024}
+\subsection*{PHYS31.01: Analytical Physics 1}
+\begin{enumerate}
+    \item \textbf{Kepler's Laws of Planetary Motion} \\
+    1. The planet is moving in an elliptical orbit, with sun is \textbf{located at one of the focii} of the ellipse. The shortest distance of planet from its star is \textbf{perihelion} while the farthest is \textbf{aphelion}. \\
+    \\
+    2. A line from the sun to a given planet sweeps out \textbf{equal areas in equal times}. \\
+    \textbf{Justification}: Angular Momentum Conservation \\
+    \textbf{Consequences}: Perihelion has fastest speeed while aphelion has slowest speed. \\
+    \\
+    3. The periods of the planets are proportional to the 3/2 poers of the major axis lengths of their orbits. \\
+    \begin{align*}
+        T_{per}&=\frac{2\pi a^{\frac{3}{2}}}{\sqrt{GM_{cntr}}} \\
+        T^2&\propto a^3 \\
+        \textit{where }a&:\textit{ length of semi major axis} \\
+        M_{cntr}&: \textit{ mass of star} \\
+        \\&\textit{for perfectly circular path... }\\
+        \frac{Gm_s}{R}&=v^2 \\
+        T^2&=\frac{4\pi^2}{Gm_s}R^3 \\
+    \end{align*}
+    \item \textbf{Periodic Motion} \\
+    \textbf{Conditions for Oscillation in SHM}:\\
+    1. The translational and angular acceleration and angular acceleration is \textit{proportional and of opposite direction} as the translational and angular displacement. \\
+    2. Conditions are valid if the amplitude is small. \\ 
+    \begin{align*}
+        \alpha+{\omega_f}^2\theta&=constant \\
+        \alpha&:\textit{ angular acceleration} \\
+        \omega_f&:\textit{ angular frequency} \\
+        \\
+        \textit{For object oscillating along \textbf{LINEAR DIRECTION}} \\
+        x(t)&=Acos(\omega_ft+\delta) \\
+        A&:\textit{ amplitude of oscillation} \\
+        \delta&:\textit{ phase constant} \\
+        \omega_f&:\textit{ angular frequency of oscillation} \\
+        \\
+        %\textit{For object oscillating along \textbf{ROTATIONAL MOTION}} \\
+        %\theta(t)&=Acos(\omega_ft+\delta)\
+    \end{align*}
+\end{enumerate}
+\subsection*{MATH 10: Mathematics in the Modern World}
+\begin{enumerate}
+    \item \textbf{Konigsberg's Bridge Problem} \\
+    - In 1736, Euler was tasked to solve the \textit{seven bridge problem}. He found it to be \textbf{IMPOSSIBLE} to solve. \\
+    \item \textbf{Eulerian Graphs} \\
+    - Graphs that can start at a vertex and traverse through \textbf{ALL} edges and \textbf{RETURN} to the starting vertex. \\
+    Examples: Cycle Graph \\
+    \textbf{NOT} Examples: Path Graph, 7-Bridge Problem
+    \item \textbf{Example:} \\
+    %%pic [CHAT ME ABT THIS AXL PATI YUNG MISSING KO NA IBA PANG IMAGES HAHAHAHAHAHA]%%
+    \textbf{NOT} Eulerian \\
+    \item \textbf{WHY???} \\
+    \textit{\textbf{THEOREM: }A connected graph is Eulerian if and only if each of its vertices has even degree.}
+    \item \textbf{Hamiltonian Graphs} \\
+    - A closed path that starts with one vertex and traverses all other vertices exactly \textbf{ONCE}, and \textbf{RETURNS} to the starting vertex. \\
+    - The closed path is a hamiltonian cycle. \\
+    - A graph is \textbf{NOT} exclusively Hamiltonian or Eulerian. A graph can either be \textit{HAMILTONIAN AND EULERIAN}, \textit{BOTH NOT}, or \textit{either EACH}. \\
+    \item \textbf{Dirac's Theorem} \\
+    If $G$ is a simple graph with $n\ge3$ vertices such that the degree of every vertex in $G$ is at least $\frac{n}{2}$, then $G$ is Hamiltonian. \\
+    \\
+    \textbf{FALSE} \textit{because for some cases, e.g. very large cycles, it can fail.}
+    \item \textbf{Ore's Theorem} \\
+    If $G$ is a simple graph with $n\ge3$ vertices such that $deg(u)+deg(v)\ge n$ for every pair of nonadjacent vertices $u$ and $v$ in $G$, then $G$ is Hamiltonian. \\
+    \\
+    \item \textbf{Relation of Dirac's and Ore's Theorem} \\
+    Dirac's is a corollary to Ore's because Dirac is a more specific case. Ore's is a more generalized version. \\
+    \item \textbf{Knight's Tour Problem} \\
+    Is it possible? \\
+    %chessboard here%
+    \textit{\textbf{YES.}}
+    %solution%
+    \\
+    \item \textbf{Travelling Salesman feat. Hamilton Circuit} \\
+    WALA AKONG PIC LOL
+\end{enumerate}
+\end{document}
